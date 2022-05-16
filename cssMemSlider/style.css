@@ -85,4 +85,63 @@ input[name='radio-slide'] {
     width: 25%;
     transition: all 0.5s ease;
 }
+#first:checked~.wrapper .nav .active1 {
+    border-color: black;
+    background-color: black;
+}
+
+#second:checked~.wrapper .nav .active2 {
+    border-color: black;
+    background-color: black;
+}
+
+#third:checked~.wrapper .nav .active3 {
+    border-color: black;
+    background-color: black;
+}
+
+#fourth:checked~.wrapper .nav .active4 {
+    border-color: black;
+    background-color: black;
+}
+
+.bullet:hover .bullet-inner {
+    border-color: black;
+}
+
+.bullet:active .bullet-inner {
+    border-color: rgb(211, 2, 253);
+}
+
+#first:checked~.slider .active,
+#first:checked~.text-slider .active {
+    margin-left: 0;
+}
+
+#second:checked~.slider .active,
+#second:checked~.wrapper .text-slider .active {
+    margin-left: -25%;
+}
+
+#third:checked~.slider .active,
+#third:checked~.wrapper .text-slider .active {
+    margin-left: -50%;
+}
+
+#fourth:checked~.slider .active,
+#fourth:checked~.wrapper .text-slider .active {
+    margin-left: -75%;
+}
+
+@media screen and (max-width: 560px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav {
+    order: -1;
+  }
+}
 
